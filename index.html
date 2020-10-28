@@ -1,16 +1,22 @@
 <!DOCTYPE html>
-<html lang="en" onclick="jump()">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./style.css">
   <title>Jump</title>
 </head>
-<body>
+<body id="container">
 
+  <div class="container">
+    <div> <button class="btn" id="refresh-page" onclick="refreshPage()">Play</button>
+    </div>
   <div id="game">
-    <div id="character"></div>
+    <h3>Score: <span id="score"></span></h3>
+      <div id="character"></div>
     <div id="block"></div>
+  </div>
+  <button class="btn" id="jump-btn" onclick="jump()">Jump</button>
   </div>
 
   <script src="./app.js"></script>
