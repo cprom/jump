@@ -11,7 +11,9 @@ function jump() {
     
 }
 
+let score = 0;
 let checkHit =  setInterval(function(){
+  
   let characterTop = parseInt(window.getComputedStyle(character).getPropertyValue('top'))
   let blockLeft = parseInt(window.getComputedStyle(block).getPropertyValue('left'))
   if(blockLeft < 50 && blockLeft > 0 && characterTop >= 130){
@@ -19,4 +21,18 @@ let checkHit =  setInterval(function(){
     block.style.display = 'none'
     alert('you lose')
   }
+  if(blockLeft < -13 ) {
+    
+    score += 1
+    console.log(score)
+    document.getElementById('score').innerHTML = score
+  }
+  
 })
+
+//refresh page
+function refreshPage() {
+  location.reload(true)
+
+}
+
